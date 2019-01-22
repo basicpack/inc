@@ -12,6 +12,9 @@ function inc($includes){
         $filename=ROOT.'basic/getbasic/'.$include.'/'.$include.'.php';
         if(file_exists($filename)){
             require_once($filename);
+        }else{
+            die('<b>Error: </b><br>inc <b>'.$include.'</b> not found');
         }
     }
 }
+
